@@ -10,8 +10,12 @@ const ErudaProvider = dynamic(
 )
 
 export default function ErudaWrapper({ children }: { children: React.ReactNode }) {
-  if (process.env.NEXT_PUBLIC_ENVIRONMENT === "production") {
-    return children;
+  // Disable eruda in production or when NEXT_PUBLIC_DISABLE_ERUDA is set
+  if (
+    process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ||
+    process.env.NEXT_PUBLIC_DISABLE_ERUDA === "true"
+  ) {
+    return <>{children}</>;
   }
   return <ErudaProvider>{children}</ErudaProvider>
 } 

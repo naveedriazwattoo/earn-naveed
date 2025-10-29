@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "pnpm dev:dapp",
     "dev:dapp": "pnpm --filter dapp dev",
+    "dev:ngrok": "ngrok http 3000",
     "build": "pnpm build:apps",
     "build:apps": "cd apps/dapp && pnpm next build",
     "build:contracts": "forge build && pnpm export-abi",

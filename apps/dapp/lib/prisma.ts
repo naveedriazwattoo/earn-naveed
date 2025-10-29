@@ -9,34 +9,30 @@ const prismaClientSingleton = () => {
   const connectionLimit = environment === 'production' ? 1 : 5
   const poolTimeout = environment === 'production' ? 5 : 30
   
-  // Parse URL and add connection parameters for Neon
-  try {
-    const url = new URL(dbUrl)
-    url.searchParams.set('connection_limit', connectionLimit.toString())
-    url.searchParams.set('pool_timeout', poolTimeout.toString())
-    url.searchParams.set('connect_timeout', '10')
-    
-    // Use unpooled connection for migrations/direct queries
-    const directUrl = process.env.STORAGE_DATABASE_URL_UNPOOLED || dbUrl
+    // Parse URL and add connection parameters for Neon
+    try {
+      const url = new URL(dbUrl)
+      url.searchParams.set('connection_limit', connectionLimit.toString())
+      url.searchParams.set('pool_timeout', poolTimeout.toString())
+      url.searchParams.set('connect_timeout', '10')
 
-    console.log(`[${environment}] Initializing Prisma client with connection limit: ${connectionLimit}`)
+      console.log(`[${environment}] Initializing Prisma client with connection limit: ${connectionLimit}`)
 
-    const client = new PrismaClient({
-      // Only log errors, not queries and warnings to reduce noise
-      // Connection closures are normal for Neon serverless
-      log: process.env.NODE_ENV === 'development' 
-        ? ['error'] 
-        : ['error'],
-      datasources: {
-        db: {
-          url: url.toString(),
-          directUrl: directUrl
+      const client = new PrismaClient({
+        // Only log errors, not queries and warnings to reduce noise
+        // Connection closures are normal for Neon serverless
+        log: process.env.NODE_ENV === 'development' 
+          ? ['error'] 
+          : ['error'],
+        datasources: {
+          db: {
+            url: url.toString()
+          }
         }
-      }
-    })
+      })
     
     // Add connection error handling
-    client.$connect().catch((err) => {
+    client.$connect().catch((err: unknown) => {
       console.error('Prisma connection error:', err)
     })
     
@@ -54,7 +50,7 @@ const prismaClientSingleton = () => {
     console.error('Error configuring database URL:', error)
     // Fallback to original URL if parsing fails
     return new PrismaClient({
-      log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+      log: ['error'],
       datasources: {
         db: {
           url: dbUrl

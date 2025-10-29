@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-rewards
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rewards
+    volumes:
+      - rewards-db:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    container_name: redis-rewards
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  rewards-db:

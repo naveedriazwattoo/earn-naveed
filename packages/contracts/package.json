@@ -1,0 +1,17 @@
+{
+  "name": "@claim-mini/contracts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "forge build",
+    "generate-types": "typechain --target ethers-v6 'out/MiniToken.sol/MiniToken.json'",
+    "postbuild": "pnpm generate-types"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v6": "^0.5.1",
+    "typechain": "^8.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "ethers": "^6.9.0"
+  }
+} 

@@ -1,0 +1,21 @@
+{
+  "name": "@mini/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm tsc",
+    "dev": "pnpm tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/node": "^20.0.0"
+  },
+  "files": [
+    "dist",
+    "abi",
+    "types"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "claim": {
+    "title": "Reclama tu $MINI Diario",
+    "description": "Obtén más tokens $MINI simplemente usando otras apps en World.",
+    "leader": "El líder de hoy ganó ",
+    "percentile": "Estás en el percentil {{percent}}%",
+    "activity": "Según tu actividad de hoy, ganaste más $MINI que el {{percent}}% de todos los usuarios de World.",
+    "swipe": "Desliza para Reclamar",
+    "loading": "Calculando tu ranking...",
+    "position": "Resumen de Posición",
+    "badges": {
+      "title": "Insignias",
+      "topEarner": {
+        "title": "¡Has ganado tu insignia del percentil {{percent}}%!",
+        "description": "Ganaste más $MINI que el {{percent}}% de todos los usuarios de World usando otras apps."
+      },
+      "firstClaim": {
+        "title": "¡Ganaste una insignia!",
+        "description": "Felicidades por convertirte en un holder de $MINI. Gana más $MINI usando otras apps en la red World."
+      },
+      "threeDayStreak": {
+        "title": "¡Insignia de Racha de 3 Días Ganada!",
+        "description": "Has reclamado $MINI durante 3 días seguidos. ¡Mantén la racha!"
+      }
+    },
+    "claims": "Tus Reclamaciones",
+    "received": "Recibido",
+    "noClaims": "No se encontraron reclamaciones",
+    "countdown": "Desliza de nuevo en {{time}}",
+    "time": {
+      "justNow": "ahora mismo",
+      "minute": "hace {{count}} minuto",
+      "minutes": "hace {{count}} minutos",
+      "hour": "hace {{count}} hora",
+      "hours": "hace {{count}} horas",
+      "day": "hace {{count}} día",
+      "days": "hace {{count}} días"
+    }
+  },
+  "howItWorks": {
+    "title": "Mira cómo funciona",
+    "earn": {
+      "title": "Gana $MINI",
+      "description": "$MINI es un token de recompensas diarias por ser activo en la World App y en World Chain. Cuantas más transacciones hagas, más tokens ganas—tan simple como eso.",
+      "points": {
+        "one": "1 transacción = 1 $MINI",
+        "min": "Mínimo: 1 token/día",
+        "max": "Máximo: 200 tokens/día"
+      }
+    },
+    "supply": {
+      "title": "Suministro Limitado",
+      "description": "Hay un suministro fijo de 1,000 millones de tokens $MINI. Cuando se acaben, se acabaron. Empieza a acumular mientras puedas."
+    },
+    "claim": {
+      "title": "Reclama Tu Recompensa",
+      "description": "Cada 24 horas tienes una nueva oportunidad para reclamar tu recompensa diaria. Solo desliza para recogerla y tu billetera se actualizará al instante."
+    },
+    "ranking": {
+      "title": "Mira Tu Posición",
+      "description": "Después de reclamar, verás cómo se compara tu actividad con la de otros usuarios—como estar en el Top 10% del día."
+    },
+    "tracking": {
+      "title": "Sigue tu Progreso",
+      "description": "Consulta tu saldo total de $MINI, cuánto puedes vender y el tiempo restante para tu próximo reclamo."
+    },
+    "noId": {
+      "title": "Sin ID, Solo Actividad",
+      "description": "No necesitas biometría ni verificación de identidad. Solo inicia sesión con tu World Wallet y mantente activo."
+    }
+  },
+  "metadata": {
+    "title": "Recompensa diaria de $MINI",
+    "description": "Reclama tus recompensas de $MINI"
+  },
+  "common": {
+    "loading": "Un momento...",
+    "signIn": "Iniciar sesión para reclamar"
+  }
+} 

@@ -1,0 +1,80 @@
+{
+  "claim": {
+    "title": "Claim your daily $MINI",
+    "description": "Get rewarded with more $MINI tokens by simply using other apps on World.",
+    "leader": "Today's leader earned ",
+    "percentile": "You're in the {{percent}} percentile",
+    "activity": "Based on your activity today, you earned more $MINI than {{percent}}% of all World users.",
+    "swipe": "Swipe to Claim",
+    "loading": "Calculating your ranking...",
+    "position": "Position Summary",
+    "badges": {
+      "title": "Badges",
+      "topEarner": {
+        "title": "You earned your {{percent}}% percentile badge!",
+        "description": "You earned more $MINI than {{percent}}% of all other users by using other World apps."
+      },
+      "firstClaim": {
+        "title": "First Claim Badge Earned!",
+        "description": "Congratulations on making your first $MINI claim. Keep it up to earn more badges!"
+      },
+      "threeDayStreak": {
+        "title": "3-Day Streak Badge Earned!",
+        "description": "You've claimed $MINI for 3 days in a row. Keep the streak going!"
+      }
+    },
+    "claims": "Your Claims",
+    "received": "Received",
+    "noClaims": "No claims found",
+    "countdown": "Swipe again in {{time}}",
+    "time": {
+      "justNow": "just now",
+      "minute": "{{count}} minute ago",
+      "minutes": "{{count}} minutes ago",
+      "hour": "{{count}} hour ago",
+      "hours": "{{count}} hours ago",
+      "day": "{{count}} day ago",
+      "days": "{{count}} days ago"
+    }
+  },
+  "howItWorks": {
+    "title": "See how it works",
+    "earn": {
+      "title": "Earn $MINI",
+      "description": "$MINI is a daily rewards token for being active in the World App and on World Chain. The more transactions you make, the more tokens you earn—simple as that!",
+      "points": {
+        "one": "1 transaction = 1 $MINI",
+        "min": "Minimum: 1 token/day",
+        "max": "Maximum: 200 tokens/day"
+      }
+    },
+    "supply": {
+      "title": "Limited Supply",
+      "description": "There's a fixed supply of 1 billion $MINI tokens. Once they're gone, they're gone. Start stacking while you can!"
+    },
+    "claim": {
+      "title": "Claim Your Drop",
+      "description": "Every 24 hours you'll get a new chance to claim your daily reward. Just swipe to collect, and your wallet updates instantly!"
+    },
+    "ranking": {
+      "title": "See How You Stack Up",
+      "description": "After claiming, you'll see how your engagement compares to others—like being in the Top 10% of users that day."
+    },
+    "tracking": {
+      "title": "Track Your Progress",
+      "description": "View your total $MINI balance, how much is available to sell, and a countdown to your next claim window."
+    },
+    "noId": {
+      "title": "No ID, Just Activity",
+      "description": "No biometrics or ID checks required. Just sign in with your World Wallet and stay active."
+    }
+  },
+  "metadata": {
+    "title": "Daily $MINI Reward",
+    "description": "Claim your $MINI rewards"
+  },
+  "common": {
+    "loading": "One Moment ...",
+    "signIn": "Sign in to Claim"
+  }
+} 

@@ -1,0 +1,12 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+remappings = [
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/"
+]
+[rpc_endpoints]
+worldcoin = "${RPC_URL}"
+
+[etherscan]
+world = { url = "${WORLD_RPC_URL}", key = "${WORLDSCAN_API_KEY}" }

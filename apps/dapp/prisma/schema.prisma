@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("STORAGE_DATABASE_URL")
+  directUrl = env("STORAGE_DATABASE_URL_UNPOOLED")
+}
+
+model UserClaim {
+  user                 String    @id @unique
+  lastClaimedBlock     Int
+  lastTxnClaimedHash   String?
+  lastClaimedTimestamp DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  tokensLastClaimed    Int       @default(0)
+}
+
+model UserBadges {
+  user                  String   @id @unique
+  firstClaim            Boolean  @default(false)
+  claimStreak           Int      @default(0)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  badgeThreeStreak      Boolean? @default(false)
+  badgeEightyPercentile Boolean? @default(false)
+}

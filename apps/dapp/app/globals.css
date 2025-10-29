@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySansGX.woff2") format("woff2 supports variations"),
+       url("/fonts/PolySansGX.woff2") format("woff2-variations"),
+       url("/fonts/PolySansGX.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySansItalicGX.woff2") format("woff2 supports variations"),
+       url("/fonts/PolySansItalicGX.woff2") format("woff2-variations"),
+       url("/fonts/PolySansItalicGX.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySansBoldItalicGX.woff2") format("woff2 supports variations"),
+       url("/fonts/PolySansBoldItalicGX.woff2") format("woff2-variations"),
+       url("/fonts/PolySansBoldItalicGX.ttf") format("truetype-variations");
+  font-weight: 700 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+:root {
+  --background: #171717;
+  --foreground: #171717;
+}
+
+@theme {
+  /* Width Breakpoints */
+  --breakpoint-xxs: 350px;  /* Extra small phones */
+  --breakpoint-xs: 375px;   /* Small phones */
+}
+
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+}
+
+.bg-theme-2 {
+  background: linear-gradient(to bottom right, #4B0792, #0E1696, #0734A9);
+}
+
+@layer utilities {
+  .font-ultralight {
+    font-variation-settings: 'wght' 150;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

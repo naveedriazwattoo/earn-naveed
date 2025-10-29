@@ -11,7 +11,7 @@ const BadgeDrawer = ({ isOpen, children }: BadgeDrawerProps) => {
     enter: {
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 20,
         stiffness: 100,
         delay: 1
@@ -20,7 +20,7 @@ const BadgeDrawer = ({ isOpen, children }: BadgeDrawerProps) => {
     exit: {
       y: "100%",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 20,
         stiffness: 100
       }

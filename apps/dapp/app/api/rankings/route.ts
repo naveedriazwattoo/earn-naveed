@@ -25,7 +25,7 @@ export async function GET() {
     });
 
     // Add ranking position to each result
-    const rankedResults = rankings.map((ranking, index) => ({
+    const rankedResults = rankings.map((ranking: typeof rankings[0], index: number) => ({
       rank: index + 1,
       user: ranking.user,
       tokensLastClaimed: ranking.tokensLastClaimed,
